@@ -1,0 +1,36 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http": "0.0.0",
+    "mariadb": "^2.1.1",
+    "mongodb": "^3.3.3",
+    "mongoose": "^5.7.7",
+    "mysql": "^2.16.0",
+    "nodemailer": "^4.7.0"
+  },
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.3",
+    "fs-extra": "^0.30.0",
+    "request": "^2.88.0"
+  },
+  "description": "Project Guidelines:",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muktika/project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/muktika/project/issues"
+  },
+  "homepage": "https://github.com/muktika/project#readme"
+}

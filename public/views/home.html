@@ -1,0 +1,120 @@
+<div class="container">
+  <div class="panel panelMargin">
+    <form id="tableForm">
+      <h3>Top 10 airports with most delay at arrival</h3>
+      <br>
+      <h4>Select a reason for delay</h4>
+      <select name="selectReason" value="selectReason" ng-model="select1">
+        <option value="A">Airline/Carrier</option>
+        <option value="B">Weather</option>
+        <option value="C">National Air System</option>
+        <option value="D">Security</option>
+      </select>&nbsp&nbsp&nbsp&nbsp
+      <input type="submit" value="Submit" ng-click="submit1()">
+      <br><br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Destination</th>
+            <th>Number of Flights</th>
+            <th>Total Security Delay</th>
+            <th>Average Security Delay</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="x in securityDelay">
+            <td>{{x._id}}</td>
+            <td>{{x.total_flights}}</td>
+            <td>{{x.total_delay}}</td>
+            <td>{{x.round_delay}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+    <br><br><br>
+
+    <form id="tableForm">
+      <h3>Top 10 airports with most delay due to runway unavailability for an airline</h3>
+      <br>
+      <h4>Select an airline</h4>
+      <select name="selectAirline" value="selectAirline" ng-model="select2">
+        <option value="DL">Delta Air Lines</option>
+        <option value="AA">American Airlines</option>
+        <option value="UA">United Airlines</option>
+        <option value="AS">Alaska Airlines</option>
+        <option value="9E">Endeavor Air</option>
+        <option value="B6">Jetblue Airways</option>
+        <option value="EV">ExpressJet Airlines</option>
+        <option value="F9">Frontier Airlines</option>
+        <option value="G4">Allegiant Air</option>
+        <option value="HA">Hawaiian Airlines</option>
+        <option value="MQ">Envoy Air</option>
+        <option value="NK">Spirit Airlines</option>
+        <option value="OH">PSA Airlines</option>
+        <option value="OO">Skywest Airlines</option>
+        <option value="VX">Virgin America</option>
+        <option value="WN">Southwest Airlines</option>
+        <option value="YV">Mesa Airlines</option>
+        <option value="YX">Midwest Airlines</option>
+      </select>&nbsp&nbsp&nbsp&nbsp
+      <input type="submit" value="Submit" ng-click="submit2()">
+      <br><br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Origin</th>
+            <th>Number of Flights</th>
+            <th>Total Taxi Delay</th>
+            <th>Average Taxi Delay</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="y in taxiDelay">
+            <td>{{y._id}}</td>
+            <td>{{y.total_flights}}</td>
+            <td>{{y.total_delay}}</td>
+            <td>{{y.round_delay}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+    <br><br><br>
+
+    <form id="tableForm">
+      <h3>Top 10 airlines with most number of cancelled flights in the year 2018</h3>
+      <br>
+      <h4>Select a reason for cancellation</h4>
+      <select name="selectReason" value="selectReason" ng-model="select3">
+        <option value="A">Airline/Carrier</option>
+        <option value="B">Weather</option>
+        <option value="C">National Air System</option>
+      </select>&nbsp&nbsp&nbsp&nbsp
+      <input type="submit" value="Submit" ng-click="submit3()">
+      <br><br>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Flight Carrier</th>
+            <th>Total Nummber of Flights Cancelled</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="z in cancelledFlights">
+            <td>{{z._id}}</td>
+            <td>{{z.count}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+
+  </div>
+</div>
+    
+<!--footer-->
+<div class="footer navbar-fixed-bottom footerClass col-lg-12 col-md-12">
+  
+</div>
+
+
